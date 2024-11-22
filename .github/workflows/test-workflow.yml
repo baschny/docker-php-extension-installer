@@ -2,16 +2,10 @@ name: Test multi-arch build
 
 on:
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
 
 jobs:
-  readme-release:
+  build-push-multiarch:
     runs-on: ubuntu-latest
-    env:
-      VERSIONTAG_THIS: ""
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
